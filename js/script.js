@@ -1,5 +1,5 @@
 // even pada saat di klik
-$('.page-scrol').on('click', function(e){
+$('.page-scroll').on('click', function(e){
 	e.preventDefault();
 	// abil isi href
 	var tujuan = $(this).attr('href');
@@ -8,11 +8,11 @@ $('.page-scrol').on('click', function(e){
 	
 	var pos = elemenTujuan.offset().top -50;
 	
-	$('body, html'),animate ({
+	$('body, html').animate ({
 		scrollTop : pos
 	
 	});
 
 	
 
-});
+})
