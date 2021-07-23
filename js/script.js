@@ -11,7 +11,7 @@ $('.page-scrol').on('click', function(e){
 	$('body, html'),animate ({
 		scrollTop : pos
 	
-	})
+	});
 
 	
 
