@@ -9,7 +9,7 @@ $('.page-scrol').on('click', function(e){
 	var pos = elemenTujuan.offset().top -50;
 	
 	$('body, html'),animate ({
-		scrollTop : pos;
+		scrollTop : pos
 	
 	})
 
