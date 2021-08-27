@@ -1,0 +1,318 @@
+// font
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+// variable
+$colorUtamatext: #4a4a4a;
+$tombol: #23c495;
+// mixin
+@mixin mr {
+  .murup {
+    color: rgb(233, 233, 233) !important;
+  }
+  .redup {
+    color: $colorUtamatext !important;
+  }
+}
+
+@mixin tombol {
+  font-size: 1em;
+  background-color: $tombol;
+  padding: 0.45em 2.25em;
+  border: 0.15em solid $tombol;
+  text-decoration: none;
+  color: white;
+  border-radius: 2em;
+  transition: 0.2s linear;
+  &:hover {
+    background-color: rgba(white, 0%);
+    color: $tombol;
+  }
+}
+
+// style
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+// .slide0 {
+//   transform: translateY(-100px) !important;
+//   transition: 1s all;
+// }
+
+// .slide1 {
+//   transform: translateY(0) !important;
+//   transition: 1s all;
+// }
+
+.navbar {
+  transition: 0.3s transform !important;
+
+  margin-bottom: -14em;
+  .container {
+    .navbar-brand {
+      @include mr();
+    }
+    .navbar-nav {
+      a {
+        font-weight: 500;
+        opacity: 100%;
+        transition: 0.5 linear;
+        @include mr();
+        &:hover {
+          color: $tombol !important;
+        }
+      }
+    }
+
+    .socemed {
+      a {
+        @include mr();
+        text-decoration: none;
+        &:hover {
+          color: $tombol !important;
+        }
+
+        @media (max-width: 991.98px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.hero-sec {
+  background: radial-gradient(circle, rgba(245, 250, 249, 1) 0%, rgba(246, 254, 253, 1) 47%, rgba(241, 247, 247, 1) 100%);
+  height: 140vh;
+  .heros {
+    padding-top: 60vh;
+    .hero {
+      .text1 {
+        h1 {
+          font-size: 7vmax;
+          font-weight: 300;
+          strong {
+            font-weight: 800;
+          }
+        }
+      }
+      .text2 {
+        margin-top: 1.3em;
+        a {
+          @include tombol();
+        }
+      }
+      .text3 {
+        margin-top: 30vh;
+        a {
+          text-decoration: none;
+          i {
+            color: $colorUtamatext !important;
+            font-size: 2em;
+            transition: 0.1s all;
+            &:hover {
+              color: $tombol !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-sec {
+  height: 110vmin;
+  display: flex;
+  align-items: center;
+  // background-color: salmon;
+  .abouts {
+    .row {
+      .ab-img {
+        img {
+          width: 100vh;
+          border: none !important;
+          // pointer-events: none;
+        }
+      }
+      .ab-text {
+        h3 {
+          font-size: 9vmin;
+        }
+        p {
+          font-size: 4vmin;
+        }
+      }
+    }
+  }
+}
+
+.showcase {
+  background-image: url(../img/bg-img/blac-and-silver-wide.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 140vmin;
+  .container-fluid {
+    height: 100%;
+    align-items: center;
+    h2 {
+      color: white;
+      font-size: 6vmin;
+      text-shadow: 1px 1px 2px black;
+      font-weight: 600;
+    }
+    .swiper-wrapper {
+      display: flex;
+      align-items: center;
+      .img {
+        border-radius: 3em;
+        overflow: hidden;
+        box-shadow: 0 0 5em #000000;
+        background-image: url(../img/showcase/merch.jpg);
+        height: 45vmax;
+        width: 100%;
+        background-size: cover;
+        background-position: top;
+        display: flex;
+        transition: 1s;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        &:nth-child(2) {
+          background-image: url(../img/showcase/gotravel.jpg);
+        }
+        &:nth-child(3) {
+          background-image: url(../img/showcase/company-profile.jpg);
+        }
+        &:nth-child(4) {
+          background-image: url(../img/showcase/landing.jpg);
+        }
+        &:nth-child(5) {
+          background-image: url(../img/showcase/portfolio.jpg);
+        }
+        &:nth-child(6) {
+          background-image: url(../img/showcase/wedding.jpg);
+        }
+        &:nth-child(7) {
+          background-image: url(../img/showcase/lightbox.jpg);
+        }
+        .visit {
+          // @include tombol();
+          // transform: translateY(15vmin);
+          align-items: end;
+          padding: 2em 2em;
+          height: 12%;
+          background-color: white;
+          color: $tombol;
+          border-radius: 0 0 0 2em;
+          text-decoration: none !important;
+          box-shadow: 0px 0px 10px $tombol;
+          transition: 500ms all;
+          font-weight: 500;
+          &:hover {
+            background-color: $tombol;
+            color: white;
+          }
+        }
+      }
+    }
+    .bundar {
+      transform: scale(200%);
+    }
+  }
+}
+
+.tt {
+  height: 120vmin;
+  .container-fluid {
+    height: 100%;
+    .row {
+      // background-color: salmon;
+      height: 100%;
+      .qt {
+        p {
+          font-family: 'Oswald', sans-serif;
+          font-size: 9vmin;
+          font-weight: 600;
+          color: black;
+          opacity: 0.4;
+        }
+        i {
+          font-size: 17vmin;
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+}
+
+.form {
+  min-height: 90vmin;
+  background-color: lighten($tombol, 1%);
+  font-size: 1.2em;
+  font-weight: 500;
+  position: relative;
+  form {
+    position: relative;
+    z-index: 100;
+  }
+
+  input {
+    border: none;
+  }
+  button {
+    background-color: #9624c6;
+    border: none;
+    &:hover {
+      background-color: #ac51d3;
+    }
+  }
+
+  // @media screen and (min-width: 468px) {
+  //   min-height: 100vmin;
+  // }
+}
+
+footer {
+  background-color: #212529;
+  color: white;
+  bottom: 0;
+  z-index: 100000;
+  .container-fluid {
+    a {
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: $tombol;
+      }
+    }
+  }
+}
+
+#particles-js {
+  // position: fixed;
+  position: absolute;
+  height: 100%;
+}
+
+// loading
+.stuck {
+  overflow: hidden;
+}
+
+.bg {
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-color: #fff;
+  z-index: 9;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 13vmin;
+    height: 13vmin;
+  }
+}
